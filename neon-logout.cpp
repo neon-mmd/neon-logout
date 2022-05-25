@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn3 = new QPushButton(&win);
   QObject::connect(Btn3, &QPushButton::clicked,[=] () {
-    runCommand("echo $DESKTOP_SESSION | killall");
+    runCommand("killall echo $DESKTOP_SESSION");
     });
   Btn3->setIcon(QIcon("/opt/neon-logout/logout.png"));
   Btn3->setIconSize(QSize(100,100));
