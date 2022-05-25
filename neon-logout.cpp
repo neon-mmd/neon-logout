@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn1 = new QPushButton(&win);
   QObject::connect(Btn1, SIGNAL(clicked()),&app, SLOT(quit()));
-  Btn1->setIcon(QIcon("/opt/neon-logout/cancel.png"));
+  Btn1->setIcon(QIcon("/opt/neon-logout-git/cancel.png"));
   Btn1->setIconSize(QSize(100,100));
   Btn1->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn1,0,0,1,1);
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn2, &QPushButton::clicked,[=] () {
     runCommand("shutdown -h now");
     });
-  Btn2->setIcon(QIcon("/opt/neon-logout/shutdown.png"));
+  Btn2->setIcon(QIcon("/opt/neon-logout-git/shutdown.png"));
   Btn2->setIconSize(QSize(100,100));
   Btn2->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn2,0,1,1,1);
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn3, &QPushButton::clicked,[=] () {
     runCommand("killall echo $DESKTOP_SESSION");
     });
-  Btn3->setIcon(QIcon("/opt/neon-logout/logout.png"));
+  Btn3->setIcon(QIcon("/opt/neon-logout-git/logout.png"));
   Btn3->setIconSize(QSize(100,100));
   Btn3->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn3,0,2,1,1);
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn4, &QPushButton::clicked,[=] () {
     runCommand("reboot");
     });
-  Btn4->setIcon(QIcon("/opt/neon-logout/reboot.png"));
+  Btn4->setIcon(QIcon("/opt/neon-logout-git/reboot.png"));
   Btn4->setIconSize(QSize(100,100));
   Btn4->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn4,0,3,1,1);
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn5, &QPushButton::clicked,[=] () {
     runCommand("slock");
     });
-  Btn5->setIcon(QIcon("/opt/neon-logout/lock.png"));
+  Btn5->setIcon(QIcon("/opt/neon-logout-git/lock.png"));
   Btn5->setIconSize(QSize(100,100));
   Btn5->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn5,0,4,1,1);
@@ -91,7 +91,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn6, &QPushButton::clicked,[=] () {
     runCommand("systemctl hibernate");
     });
-  Btn6->setIcon(QIcon("/opt/neon-logout/hibernate.png"));
+  Btn6->setIcon(QIcon("/opt/neon-logout-git/hibernate.png"));
   Btn6->setIconSize(QSize(100,100));
   Btn6->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn6,0,5,1,1);
@@ -105,7 +105,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn7, &QPushButton::clicked,[=] () {
     runCommand("systemctl suspend");
     });
-  Btn7->setIcon(QIcon("/opt/neon-logout/sleep.png"));
+  Btn7->setIcon(QIcon("/opt/neon-logout-git/sleep.png"));
   Btn7->setIconSize(QSize(100,100));
   Btn7->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn7,0,6,1,1);
@@ -119,7 +119,7 @@ int main(int argc, char **argv)
   QObject::connect(Btn8, &QPushButton::clicked,[=] () {
     runCommand("systemctl hybrid-sleep");
     });
-  Btn8->setIcon(QIcon("/opt/neon-logout/hybrid.png"));
+  Btn8->setIcon(QIcon("/opt/neon-logout-git/hybrid.png"));
   Btn8->setIconSize(QSize(100,100));
   Btn8->setStyleSheet("QPushButton{border-radius:50%;}");
   lay->addWidget(Btn8,0,7,1,1);
