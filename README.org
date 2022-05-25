@@ -1,0 +1,32 @@
+* neon-logout
+
+A QT based logout application window for all DE & WMs
+
+This project was started as a logout window manager for my custom arch distro called *NEON-OS*. Inspired by *sir derek Taylor (DISTROTUBE)*
+
+* Preview
+
+[[file:preview.png]]
+
+*NOTE:* The desktop background credit goes to *sir derek taylor (DISTROTUBE)* @ gitlab.com/dwt1/wallpapers
+
+* Credits
+
+shutdown.png --- <a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Tempo_doloe - Flaticon</a>
+
+reboot.png --- <a href="https://www.flaticon.com/free-icons/reboot" title="reboot icons">Reboot icons created by SumberRejeki - Flaticon</a>
+
+cancel.png --- <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Freepik - Flaticon</a>
+
+hibernate.png --- <a href="https://www.flaticon.com/free-icons/zoology" title="zoology icons">Zoology icons created by Marz Gallery - Flaticon</a>
+
+sleep.png --- <a href="https://www.flaticon.com/free-icons/sleep-mode" title="sleep mode icons">Sleep mode icons created by Andrean Prabowo - Flaticon</a>
+
+lock.png --- <a href="https://www.flaticon.com/free-icons/lock" title="lock icons">Lock icons created by pojok d - Flaticon</a>
+
+hybrid.png --- <a href="https://www.flaticon.com/free-icons/hybrid-car" title="hybrid car icons">Hybrid car icons created by Eucalyp - Flaticon</a>
+
+logout.png --- <a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Uniconlabs - Flaticon</a>
+
+*NOTE:* I do not encourage plagarism but i do encourage FOSS
+
