@@ -2,9 +2,14 @@
 #include <QtWidgets>
 #include <QtGui>
 #include <QtCore>
+#include <cstdlib>
+#include <string>
 
-void runCommand(char command[]){
-  std::system(command);
+#define sys std::system
+#define str std::string
+
+void runCommand(str command){
+  std::system(command.c_str());
 }
 
 int main(int argc, char **argv)
@@ -33,7 +38,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn2 = new QPushButton(&win);
   QObject::connect(Btn2, &QPushButton::clicked,[=] () {
-    runCommand("shutdown -h now");
+    runCommand(str("shutdown -h now"));
     });
   Btn2->setIcon(QIcon("/opt/neon-logout-git/shutdown.png"));
   Btn2->setIconSize(QSize(100,100));
@@ -47,7 +52,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn3 = new QPushButton(&win);
   QObject::connect(Btn3, &QPushButton::clicked,[=] () {
-    runCommand("killall echo $DESKTOP_SESSION");
+    runCommand(str("killall echo $DESKTOP_SESSION"));
     });
   Btn3->setIcon(QIcon("/opt/neon-logout-git/logout.png"));
   Btn3->setIconSize(QSize(100,100));
@@ -61,7 +66,7 @@ int main(int argc, char **argv)
   
   QPushButton *Btn4 = new QPushButton(&win);
   QObject::connect(Btn4, &QPushButton::clicked,[=] () {
-    runCommand("reboot");
+    runCommand(str("reboot"));
     });
   Btn4->setIcon(QIcon("/opt/neon-logout-git/reboot.png"));
   Btn4->setIconSize(QSize(100,100));
@@ -75,7 +80,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn5 = new QPushButton(&win);
   QObject::connect(Btn5, &QPushButton::clicked,[=] () {
-    runCommand("slock");
+    runCommand(str("slock"));
     });
   Btn5->setIcon(QIcon("/opt/neon-logout-git/lock.png"));
   Btn5->setIconSize(QSize(100,100));
@@ -89,7 +94,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn6 = new QPushButton(&win);
   QObject::connect(Btn6, &QPushButton::clicked,[=] () {
-    runCommand("systemctl hibernate");
+    runCommand(str("systemctl hibernate"));
     });
   Btn6->setIcon(QIcon("/opt/neon-logout-git/hibernate.png"));
   Btn6->setIconSize(QSize(100,100));
@@ -103,7 +108,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn7 = new QPushButton(&win);
   QObject::connect(Btn7, &QPushButton::clicked,[=] () {
-    runCommand("systemctl suspend");
+    runCommand(str("systemctl suspend"));
     });
   Btn7->setIcon(QIcon("/opt/neon-logout-git/sleep.png"));
   Btn7->setIconSize(QSize(100,100));
@@ -117,7 +122,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn8 = new QPushButton(&win);
   QObject::connect(Btn8, &QPushButton::clicked,[=] () {
-    runCommand("systemctl hybrid-sleep");
+    runCommand(str("systemctl hybrid-sleep"));
     });
   Btn8->setIcon(QIcon("/opt/neon-logout-git/hybrid.png"));
   Btn8->setIconSize(QSize(100,100));

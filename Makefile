@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = neon-logout1.0.0
-DISTDIR = /run/media/destruct/c45abf85-cf28-40c5-b984-71955f2030d1/neon-logout/.tmp/neon-logout1.0.0
+DISTDIR = /run/media/destruct/39568688-b38c-43ac-a7de-c0f9888ec0c0/git-repos/neon-logout/.tmp/neon-logout1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -pipe -O2 -flto=8 -fno-fat-lto-objects -fuse-linker-plugin -fPIC
 LIBS          = $(SUBLIBS) /usr/lib/libQt5Widgets.so /usr/lib/libQt5Gui.so /usr/lib/libQt5Core.so -lGL -lpthread   
