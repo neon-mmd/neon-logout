@@ -14,7 +14,7 @@ void runCommand(str command){
 
 int main(int argc, char **argv)
 {
-  // std::string path = "/opt/neon-logout";
+  // str path = str("/opt/neon-logout");
   
   QApplication app (argc, argv);
   QWidget win;
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 
   QPushButton *Btn3 = new QPushButton(&win);
   QObject::connect(Btn3, &QPushButton::clicked,[=] () {
-    runCommand(str("killall echo $DESKTOP_SESSION"));
+    runCommand(str("loginctl kill-user $USER"));
     });
   Btn3->setIcon(QIcon("/opt/neon-logout-git/logout.png"));
   Btn3->setIconSize(QSize(100,100));
@@ -133,7 +133,7 @@ int main(int argc, char **argv)
   Label8->setStyleSheet("QLabel{font-weight:600;letter-spacing:1px;font-size:15px;}");
   Label8->setAlignment(Qt::AlignCenter);
   lay->addWidget(Label8,1,7,1,1);
-
+ 
   win.show();
   return app.exec();
 }
