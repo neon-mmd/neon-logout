@@ -3,10 +3,8 @@
 #include <QtGui>
 #include <QtWidgets>
 #include <cstdlib>
-#include <functional>
 #include <string>
 #include <unordered_map>
-#include <vector>
 
 using namespace std;
 
@@ -24,7 +22,6 @@ int main(int argc, char **argv) {
 
   string path = "/opt/neon-logout-git/";
 
-  vector<QPushButton *> btns;
   unordered_map<string, string> props = {
       {"cancel", "killall neon-logout"},
       {"shutdown", "shutdown -h now"},
@@ -33,8 +30,8 @@ int main(int argc, char **argv) {
       {"lock", "slock"},
       {"hibernate", "systemctl hibernate"},
       {"sleep", "systemctl suspend && killall neon-logout"},
-      {"hybrid", "systemctl hybrid-sleep"}};
-  vector<QLabel *> labels;
+      {"hybrid", "systemctl hybrid-sleep"},
+  };
 
   int cnt = 0;
   for (auto i = props.begin(); i != props.end(); i++) {
@@ -45,7 +42,6 @@ int main(int argc, char **argv) {
                      [=]() { runCommand(i->second); });
     Btn->setIcon(QIcon(QString(string(path + i->first + ".png").c_str())));
     lay->addWidget(Btn, 0, cnt, 1, 1);
-    btns.emplace_back(Btn);
 
     QLabel *Label = new QLabel(i->first.c_str(), &win);
     Label->setStyleSheet(
